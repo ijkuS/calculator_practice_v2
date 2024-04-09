@@ -1,0 +1,292 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'League Spartan', sans-serif;
+}
+
+.attribution {
+	color: var(--text-light);
+	font-size: 11px;
+	font-weight: 200;
+	text-align: center;
+	padding: 1rem;
+}
+.attribution a {
+	color: var(--active-color);
+	text-decoration: none;
+}
+
+.attribution a:hover {
+	opacity: 50%;
+}
+
+/* Theme 1 */
+:root {
+	--main-bg-color: hsl(222, 26%, 31%);
+	--sub-bg-color: hsl(223, 31%, 20%);
+	--screen-bg-color: hsl(224, 36%, 15%);
+
+	--key-bg-color: hsl(225, 21%, 49%);
+	--key-shadow-point-color: hsl(224, 28%, 35%);
+	--point-color: hsl(6, 63%, 50%);
+	--point-color-dark: hsl(6, 70%, 34%);
+	--key-inactive-color: hsl(30, 25%, 89%);
+	--key-shadow-color: hsl(28, 16%, 65%);
+
+	--text-display-color:hsl(0, 0%, 100%);
+	--text-color: hsl(221, 14%, 31%);
+	--text-light: hsl(0, 0%, 100%);
+
+	--radius-1: 0.5rem;
+}
+
+body {
+	height: 100vh;
+	min-height: 500px;
+
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	align-items: center; /* 가로로 중앙정렬 */
+
+	font-size: 2rem;
+	color: var(--text-color);
+
+	background-size: 100vw;
+	background-color: var(--main-bg-color);
+}
+
+/* Theme 2 */
+body.two {
+	--main-bg-color: hsl(0, 0%, 90%);
+	--sub-bg-color: hsl(0, 5%, 81%);
+	--screen-bg-color: hsl(0, 0%, 93%);
+
+	--key-bg-color: hsl(185, 42%, 37%);
+	--key-shadow-point-color: hsl(185, 58%, 25%);
+	--point-color: hsl(25, 98%, 40%);
+	--point-color-dark: hsl(25, 99%, 27%);
+	--key-inactive-color: hsl(45, 7%, 89%);
+	--key-shadow-color: hsl(35, 11%, 61%);
+
+	--text-display-color:hsl(60, 10%, 19%);
+	--text-color: hsl(60, 10%, 19%);
+	--text-light: hsl(0, 0%, 100%);
+}
+/* Theme 3 */
+body.three {
+	--main-bg-color: hsl(268, 75%, 9%);
+	--sub-bg-color: hsl(268, 71%, 12%);
+	--screen-bg-color: hsl(268, 71%, 12%);
+	/* --screen-bg-color: hsl(0, 0%, 93%); */
+
+	--key-bg-color: hsl(281, 89%, 26%);
+	--key-shadow-point-color: hsl(285, 91%, 52%);
+	--point-color: hsl(176, 100%, 44%);
+	--point-color-dark: hsl(177, 92%, 70%);
+	--key-inactive-color: hsl(268, 47%, 21%);
+	--key-shadow-color: hsl(290, 70%, 36%);
+
+	--text-display-color:hsl(52, 100%, 62%);
+	--text-color: hsl(52, 100%, 62%);
+	--text-light: hsl(0, 0%, 100%);
+	/* Very dark blue: hsl(198, 20%, 13%) */
+}
+
+button:hover {
+	filter: brightness(140%);
+	/* background-color: lighten(var(--key-inactive-color), 80%); */
+}
+
+/* ////////// area-related /////////////////////////////////////////////////// */
+#wrapper {
+	/* width: 40vw; */
+	min-width: 370px;
+	max-width: 600px;
+	height: 80vh;
+	min-height: 300px;
+
+	/* display: ;
+   justify-content: space-between; */
+	padding: 1rem;
+	background-color: var(--main-bg-color);
+	font-weight: 600;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#logo {
+	position: relative;
+	bottom: -0.4rem;
+	color: var(--text-display-color);
+}
+
+/* ////////// theme-related /////////////////////////////////////////////////// */
+
+.theme-area {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
+}
+#theme-text {
+	position: relative;
+	bottom: 0.5rem;
+
+	color: var(--text-display-color);
+	font-size: 1rem;
+	padding: 2rem 1rem 0 0;
+	text-transform: uppercase;
+}
+
+.theme-radio-area {
+	vertical-align: bottom;
+}
+input.toggle-button {
+	height: 1rem;
+	width: 1rem;
+	appearance: none;
+	background-color: var(--point-color);
+	border-radius: 50%;
+	opacity: 0;
+	padding: 0 0.5rem;
+}
+input.toggle-button:hover {
+	cursor: pointer;
+}
+
+.tri-state-toggle {
+	display: flex;
+	justify-content: center;
+	background-color: var(--sub-bg-color);
+	border: 3px solid var(--sub-bg-color);
+	border-radius: 1rem;
+	margin-top: 0.5rem;
+}
+#one {
+	opacity: 1;
+}
+.theme-numbers {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: var(--text-display-color);
+}
+.theme-numbers > p {
+	margin: 0 6px;
+}
+.theme-numbers > p:hover {
+	color: var(--point-color);
+	cursor: pointer;
+}
+
+/* ////////// display-related /////////////////////////////////////////////////// */
+
+#result {
+	width: 100%;
+	padding: 1.5rem;
+	margin: 2rem 0 1.5rem 0;
+	border-radius: var(--radius-1);
+	background-color: var(--screen-bg-color);
+	outline: none;
+	border: none;
+
+	color: var(--text-display-color);
+	font-size: 2rem;
+	font-weight: 700;
+
+	text-align: right;
+}
+
+/*
+#sub-wrapper {
+	 flex-direction: column; */
+/* align-items: center; 가로로 중앙정렬 */
+
+/* position: relative;
+	justify-content: center; */
+
+/* width: 35vw; */
+/* min-width: 370px;
+	max-width: 580px;
+	height: 80vh;
+	min-height: 300px; 
+}*/
+
+/* ////////// keypad-related /////////////////////////////////////////////////// */
+
+#keypad {
+	flex-direction: column;
+	background-color: var(--sub-bg-color);
+	padding: 1.5rem;
+	border-radius: var(--radius-1);
+
+	/* flex-wrap: wrap; */
+}
+
+#container1 {
+	display: grid;
+	width: 1fr;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 18px;
+	margin-bottom: 18px;
+}
+#container2 {
+	display: grid;
+	width: 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 18px;
+}
+
+.square-button {
+	padding-top: 0.5rem;
+
+	height: 4rem;
+	border-radius: 0.5rem;
+	border: none;
+
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--text-color);
+	background-color: var(--key-inactive-color);
+	box-shadow: 0 0.3rem 0 0 var(--key-shadow-color);
+	/* -webkit-box-shadow: 0 10px 0 0 var(--key-shadow-color);
+	-moz-box-shadow: 0 10px 0 0 var(--key-shadow-color); */
+}
+
+.rec-button {
+	height: 4rem;
+	border-radius: 0.5rem;
+	border: none;
+
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+#delButton {
+	font-size: 1.5rem;
+	background-color: var(--key-bg-color);
+	color: var(--text-light);
+	box-shadow: 0 0.3rem 0 0 var(--key-shadow-point-color);
+}
+#solveButton {
+	background-color: var(--point-color);
+	color: var(--text-light);
+	box-shadow: 0 0.3rem 0 0 var(--point-color-dark);
+}
+#clearButton {
+	background-color: var(--key-bg-color);
+	color: var(--text-light);
+	box-shadow: 0 0.3rem 0 0 var(--key-shadow-point-color);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+		<link rel='stylesheet' href='index.css' / >
+		<title>Calculator App</title>
+	</head>
+	<body>
+		<main id="wrapper">
+			<header>
+				<div id="logo">calc</div>
+				<div class="theme-area">
+					<span id="theme-text">theme</span>
+
+					<div class="theme-radio-area">
+						<div class="theme-numbers">
+							<p id="label-one" data-radio-id="one">1</p>
+							<p id="label-two" data-radio-id="two">2</p>
+							<p id="label-three" data-radio-id="three">3</p>
+						</div>
+
+						<div class="tri-state-toggle">
+							<input
+								class="toggle-button"
+								type="radio"
+								name="toggle"
+								id="one" />
+							<input
+								class="toggle-button"
+								type="radio"
+								name="toggle"
+								id="two" />
+							<input
+								class="toggle-button"
+								type="radio"
+								name="toggle"
+								id="three" />
+						</div>
+					</div>
+				</div>
+			</header>
+			<div id="sub-wrapper">
+				<!-- <section class="display"> -->
+				<input id="result" type="text" />
+				<!-- </section> -->
+
+				<div id="keypad">
+					<section id="container1">
+						<button class="square-button">1</button>
+						<button class="square-button">2</button>
+						<button class="square-button">3</button>
+						<button class="square-button" id="delButton">DEL</button>
+
+						<button class="square-button">4</button>
+						<button class="square-button">5</button>
+						<button class="square-button">6</button>
+						<button class="square-button">+</button>
+
+						<button class="square-button">7</button>
+						<button class="square-button">8</button>
+						<button class="square-button">9</button>
+						<button class="square-button">-</button>
+
+						<button class="square-button">.</button>
+						<button class="square-button">0</button>
+						<button class="square-button">/</button>
+						<button class="square-button">×</button>
+					</section>
+					<section id="container2">
+						<button class="rec-button" id="clearButton">C</button>
+						<button class="rec-button" id="solveButton">=</button>
+					</section>
+				</div>
+			</div>
+			<div class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Noej Ijkus</a>.
+			</div>
+		</main>
+
+		<script src="index.js"></script>
+	</body>
+</html>

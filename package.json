@@ -1,0 +1,7 @@
+{
+  "homepage" : "https://ijkus.github.io/calculator_v1/src/index.html",
+  
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
